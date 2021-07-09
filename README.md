@@ -22,3 +22,16 @@ printf("%s\n",arr1);
 printf("%s\n",arr2);
 return 0;
 }
+
+#include <stdio.h>
+int main()
+{int input=0;
+printf ("开始选择\n");
+printf("输入0或者1\n")；
+scanf("%d",&input);
+if input==1;
+printf("1的结果\n")；
+else
+printf("0的结果\n")；
+return 0;
+}
