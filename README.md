@@ -93,3 +93,54 @@ max=MAX(num1,num2)
 printf("max=%d\n",max);
 return0;
 }
+
+
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include<string.h>
+int main()
+{
+	int arr[] = { 1,2,3,4,5,6 };
+	int a = 10;
+	printf("%d\n", sizeof(a));
+	printf("%d\n", sizeof(int));
+	printf("%d\n", sizeof a);
+	printf("%d\n", sizeof(arr));
+	return 0;
+}
+
+int main()//~指按（二进制）位取反，
+{
+	int a = 0;//000000000000000000000000
+	int b = ~a;//111111111111111111111111（补码）
+	//(b是有符号的整型，最高位是符号位，“1”表示负数,负数在二进制中储存的是补码)
+	//111111111111111111111111（补码）
+	//111111111111111111111110（反码）
+	//100000000000000000000001（原码）
+	printf("%d\n", b);//打印时使用的是原码，即为-1
+	return 0;
+}//原码符号位不变，其他位取反得到反码，反码加一得到补码
+
+int main()
+{
+	int a = 10;
+	int b = a++;//++自增    后置++：先使用变量值，再自增。    前置++：先自增，再使用自增后的值。
+	printf("a=%d,b=%d\n", a, b);
+	return 0;
+}
+int main()
+{
+	int a =(int) 3.14;//将double强制转换成int
+	return 0;
+}
+int main()
+{
+	int a = 3;
+	int b = 5;
+	int c = a && b;
+	int d = a || b;
+	printf("c=%d\n", c);//&&逻辑与	左右同时为真才是真
+	printf("d=%d\n", d);//||逻辑或，有1个是真即为真
+	return 0;
+}
