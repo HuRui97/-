@@ -144,3 +144,42 @@ int main()
 	printf("d=%d\n", d);//||逻辑或，有1个是真即为真
 	return 0;
 }
+
+int main()
+{
+	int a = 10;
+	int b = 20;
+	int max = 0;
+	max = (a > b ? a : b);//exp1结果为真，执行exp2，否则执行exp3
+	printf("%d\n", max);
+	return 0;
+}
+int main()
+{
+	register int a = 10;//吧a定义成寄存器变量。
+	return 0;
+}
+int main()
+{
+	typedef unsigned int u_int;
+		unsigned int num = 20;
+		u_int num2 = 20;
+		return 0;
+}
+
+void test()
+{
+	static int a = 1;
+	a++;
+	printf("%d\n", a);
+
+}
+int main()
+{
+	int i = 0;
+	while (i < 5)
+	{test();
+	i++;
+	}
+	return 0;
+}
