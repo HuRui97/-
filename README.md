@@ -224,3 +224,26 @@ int main()
 	printf("max=%d\n", max);
 	return 0;
 }
+
+
+int main()
+{
+	int a = 10;//申请4个byte
+	int* p = &a;//用指针变量存放地址
+	//printf("%p\n", &a);//&a 取地址，显示十六进制
+	//printf("%p\n", p);
+	*p = 20;//*解引用操作符
+	printf("a=%d\n", a);
+	return 0;
+}
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include<string.h>
+int main()
+{
+	char ch = 'w';
+	char* pc = &ch;
+	printf("%d\n", sizeof(pc));//指针大小在32位平台是4个字节，64位平台是8个字节
+	return 0;
+}
