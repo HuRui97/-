@@ -145,6 +145,10 @@ int main()
 	return 0;
 }
 
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include<string.h>
 int main()
 {
 	int a = 10;
@@ -181,5 +185,42 @@ int main()
 	{test();
 	i++;
 	}
+	return 0;
+}
+
+int main()
+{
+	extern int g_val;//声明外部符号
+	printf("g_val=%d\n", g_val);
+	return 0;
+}
+extern int Add(int, int);
+int main()
+{
+	int a = 10;
+	int b = 20;
+	int sum = Add(a,b);
+	printf("sum=%d\n", sum);
+	return 0;
+}
+ int Add(int x, int y)//定义函数
+{
+	int z = x + y;
+	return z;
+}
+ 
+#define MAX 100//定义标识符常量。
+int main()
+{
+	int a = MAX;
+	return 0;
+}
+#define MAX(X,Y) (X>Y?X:Y)//定义宏
+int main()
+{
+	int a = 10;
+	int b = 20;
+	int max = MAX(a, b);
+	printf("max=%d\n", max);
 	return 0;
 }
