@@ -247,3 +247,24 @@ int main()
 	printf("%d\n", sizeof(pc));//指针大小在32位平台是4个字节，64位平台是8个字节
 	return 0;
 }
+
+#include <stdio.h>
+#include <string.h>
+struct Boook
+{char name[20];
+short price;
+};
+int main()
+{struct Book b1={"C语言程序设计"，55}；
+printf("书名：%s\n",b1.name);
+printf("价格：%d元\n",b1.price);
+b1.price=20;
+printf（"修改后%d\n",b1.price）;
+struct Book*pb=&b1;
+printf("%s\n",(*pb).name);
+printf("%d\n",(*pb).price);
+printf("%s\n",pb->name);
+printf("%d\n",pb->price);
+strcpy(b1.name,"C++")；
+printf("书名：%s\n",b1.name);
+}
