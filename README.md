@@ -285,3 +285,15 @@ printf("书名：%s\n",b1.name);
 //		printf("老年\n");
 //	return 0;
 //}
+
+int main()
+{
+	int num = 0;
+	scanf("%d", &num);
+	int a = num % 2;
+	if (1 == a)
+		printf("奇数\n");
+	else
+		printf("偶数\n");
+	return 0;
+}
