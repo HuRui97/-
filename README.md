@@ -454,3 +454,39 @@ int main()
 	printf("%d\n", ret);
 	return 0;
 }
+
+
+int main()
+{
+	int a = 0;
+	int n = 0;
+	int ret = 1;
+	int sum = 0;
+	for (n = 1; n <= 4; n++)
+	{
+		for (a = 1,ret=1; a <= n; a++)
+		{
+			ret = ret * a;
+		}
+		sum = sum + ret;
+	}
+	
+	printf("%d\n", sum);
+	return 0;
+}
+
+
+int main()
+{
+	int a = 0;
+	int n = 0;
+	int ret = 1;
+	int sum = 0;
+	for (n = 1; n <= 4; n++)
+	{
+		ret = ret * n;
+		sum = sum + ret;
+	}
+	printf("%d\n", sum);
+	return 0;
+}
