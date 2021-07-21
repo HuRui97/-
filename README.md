@@ -396,3 +396,61 @@ int main()
 	}
 	return 0;
 }
+
+int main()
+{
+	for (;;)//for循环的初始化，判断，调整部分都可以省略，但是，判断部分省略会导致判断条件恒为真
+	{
+		printf("hehe\n");
+	}
+	return 0;
+}
+
+int main()
+{
+	int i = 0;
+	for (i = 0; i < 10; i++)
+	{
+		int j = 0;
+		for (j = 0; j < 10; j++)//循环次数为内外层代码循环次数相乘
+		{
+			printf("hehe\n");
+		}
+	}
+	return 0;
+}
+
+int main()
+{
+	int i = 0;
+	int k = 0;
+	for (i = 0, k = 0; k = 0; i++, k++)//“=”为赋值，赋值为0表示假，不循环
+		k++;
+	return 0;
+}
+
+int main()
+{
+	int i = 1;
+	do 
+	{
+		printf("%d ", i);
+		i++;
+	}
+	while (i <= 10);
+	return 0;
+}
+
+int main()
+{
+	int a = 0;
+	int n = 0;
+	int ret = 1;
+	scanf("%d", &n);
+	for (a = 1; a <= n; a++)
+	{
+		ret = ret * a;
+	}
+	printf("%d\n", ret);
+	return 0;
+}
