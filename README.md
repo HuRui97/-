@@ -546,3 +546,52 @@ int main()//二分法
 	}
 	return 0;
 }
+
+
+#include<stdio.h>
+#include<windows.h>
+#include<stdlib.h>
+int main()
+{
+char arr1[]="123456789";
+char arr2[]="#########";
+int left=0;
+int right=strlen(arr1)-1;
+while(left<=right)
+{
+arr2[left]=arr1[left];
+arr2[right]=arr1[right];
+printf("%s\n",arr2);
+Sieep(1000);
+system("cls");
+left++;
+right--;
+}
+printf("%s\n",arr2);
+return 0;
+}
+
+int main()
+{
+int i=0;
+char arr[20]={0};
+for(i=0;i<3;i++)
+{
+printf("请输入密码\n");
+scanf("%s",arr);
+if(strcmp(arr,"123456")==0);
+{
+printf("密码正确\n");
+break;
+}
+else
+{
+printf("密码错误\n");
+}
+}
+if(i==3)
+{
+printf("三次均错，退出程序\n")；
+}
+return 0;
+}
