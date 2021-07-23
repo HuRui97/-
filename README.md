@@ -637,3 +637,57 @@ int main()
 	}
 	return 0;
 }
+int main()
+{
+	int m = 24;
+	int n = 18;
+	int r = 0;
+	scanf("%d,%d", &m,&n);
+	while (m % n != 0)
+	{
+		int r = m % n;
+		m = n;
+		n = r;
+	}//辗转相除法求最小公约数
+	printf("%d\n", n);
+	return 0;
+}
+
+int main()
+{
+	int year = 0;
+	for (year = 1000; year <= 2000; year++)
+	{
+		if (year % 4 == 0 && year % 100 != 0)
+		{
+			printf("%d  ", year);
+		}
+		else if (year % 400 == 0)
+		{
+			printf("%d  ", year);
+		}
+	}
+	return 0;
+}
+
+
+int main()
+{
+	int i = 0;
+	for (i = 100; i <= 200; i++)
+	{
+		int j = 0;
+		for (j = 2; j < i; j++)
+		{
+			if (i % j == 0)
+			{
+				break;
+			}
+		}
+		if (j == i)
+		{
+			printf("%d,",i);
+		}
+	}
+	return 0;
+}
