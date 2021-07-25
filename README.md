@@ -691,3 +691,93 @@ int main()
 	}
 	return 0;
 }
+
+
+int main()
+{
+	int i = 0;
+	for (i = 101; i <= 200; i+=2)
+	{
+		int j = 0;
+		for (j = 2; j <=sqrt(i); j++)
+		{
+			if (i % j == 0)
+			{
+				break;
+			}
+		}
+		if (j >sqrt(i) )
+		{
+			printf("%d,",i);
+		}
+	}
+	return 0;
+}
+
+
+int main()
+{
+	int i = 0;
+	int j = 0;
+	for (i = 1; i <= 100; i++)
+	{
+		if (i % 10 == 9)
+		{
+			j++;
+		}
+		if (i / 10 == 9)
+		{
+			j++;
+		}
+	}
+	printf("%d\n", j);
+	return 0;
+}
+
+
+
+int main()
+{
+	int i = 0;
+	double sum = 0.0;
+	int flag = 1;
+	for (i = 1; i <= 100; i++)
+	{
+		sum += flag*1.0 / i;
+		flag = -flag;
+	}
+	printf("%lf\n", sum);
+	return 0;
+}
+
+int main()
+{
+	char arr[] = { -1,-2,-3,-4,-5,-6,-7,-8,-9,-10 };
+	int i = 0;
+	int max = arr[0];
+	int sz = sizeof(arr) / sizeof(arr[0]);
+	for (i = 0; i < sz; i++)
+	{
+		if (max < arr[i])
+		{
+			max = arr[i];
+		}
+	}
+	printf("%d\n", max);
+	return 0;
+}
+
+int main()//99乘法表
+{
+	int i = 0;
+	for (i = 1; i <= 9; i++)//打印9行
+	{
+		int j = 1;
+		for (j = 1; j <= i; j++)//打印9列
+		{
+			printf("%d*%d=%-2d ", j, i, i * j);//打印两位，位数不够打印空格（2为右对齐，-2为左对齐）
+		}
+		printf("\n");
+	}
+	return 0;
+}
