@@ -796,7 +796,9 @@ void game()
 {
 int ret=0;
 int guess=0;
-ret=rand()%100+1;
+ret=rand()%100+1;1
+while(1)
+{
 printf("请输入猜测数字：");
 scanf("%d",&guess);
 if(guess>ret)
@@ -811,6 +813,7 @@ else
 {
 printf("猜对了\n");
 break;
+}
 }
 }
 int main()
@@ -837,3 +840,19 @@ break;
 while(input);
 return 0;
 }
+
+
+
+#define _CRT_SECURE_NO_WARNINGS 1
+#include<stdio.h>
+int main()
+{
+	printf("hello\n");
+	goto again;
+	printf("你好\n");
+again:
+	printf("再见\n");
+	return 0;
+}
+
+
