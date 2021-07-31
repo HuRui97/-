@@ -935,3 +935,39 @@ int main()
 	printf("a=%d  b=%d\n", a, b);
 	return 0;
 }
+
+
+int is_prime(int n)
+{
+	int j = 0;
+	for(j=2;j<=sqrt(n);j++)
+	{
+		if (n % j == 0)
+			return 0;
+	}
+	return 1;
+}
+int main()
+{
+	int i = 0;
+	for (i = 101; i <= 200; i += 2)
+	{
+		/*int j = 0;
+		for (j = 2; j <= sqrt(i); j++)
+		{
+			if(i%j==0)
+			{
+				break;
+			}
+		}
+		if(j>sqrt(i))
+		{
+			printf("%d  ", i);
+		}*/
+		if(is_prime(i)==1)
+		{
+			printf("%d  ", i);
+		}
+	}
+	return 0;
+}
