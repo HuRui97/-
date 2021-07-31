@@ -906,3 +906,32 @@ int main()
 	printf("%s\n", arr2);
 	return 0;
 }
+
+
+
+void swap1(int x, int y)//void表示这个自定义函数没有返回值,x,y改变不了a,b
+{
+	int tmp = 0;
+	tmp = x;
+	x = y;
+	y = tmp;
+}
+
+void swap2(int* pa, int* pb)
+{
+	int tmp = 0;
+	tmp = *pa;
+	*pa = *pb;
+	*pb = tmp;
+}
+int main()
+{
+	int a = 10;
+	//int* pa = &a;
+	int b = 20;
+	/*int* pb = &b;*/
+	printf("a=%d  b=%d\n", a, b);
+	swap2(&a, &b);
+	printf("a=%d  b=%d\n", a, b);
+	return 0;
+}
