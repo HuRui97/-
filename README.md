@@ -998,3 +998,41 @@ int main()
 	}
 	return 0;
 }
+
+
+int binary_search(int arr[], int k,int sz)//int arr[]实质上是一个指针，只是把数组arr的第一个元素的地址传了过来，不能用以计算数组大小
+{
+	
+	int left = 0;
+	int right = sz-1;
+	while (left <= right)
+	{
+		int mid = (left + right) / 2;
+		if (k < arr[mid])
+		{
+			right = mid - 1;
+		}
+		else if (k > arr[mid])
+		{
+			left = mid + 1;
+		}
+		else
+		{
+			return mid;
+		}
+	}
+	return -1;
+}
+
+int main()
+{
+	int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
+	int sz = sizeof(arr) / sizeof(arr[0]);
+	int k = 6;
+	int ret = binary_search(arr, k,sz);
+	if (ret == -1)
+		printf("找不到\n");
+	else
+		printf("找到下标为%d", ret);
+	return 0;
+}
