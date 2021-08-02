@@ -1049,3 +1049,31 @@ int main()
 	printf("%d\n", num);
 	return 0;
 }
+
+
+
+void new_line()
+{
+	printf("hehe\n");
+}
+void three_line()
+{
+	int i = 0;
+	for (i = 0; i < 3; i++)
+	{
+		new_line();//函数的嵌套调用
+	}
+}
+int main()
+{
+	three_line();
+	return 0;
+}
+
+int main()
+{
+	printf("%d", printf("%d", printf("%d", 43)));
+	//printf的返回值是所打印字符的个数，先打印“43”，返回值是2，于是再打印“2”，返回值为1，最后打印1；
+	return 0;
+}
+
