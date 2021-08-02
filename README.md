@@ -1036,3 +1036,16 @@ int main()
 		printf("找到下标为%d", ret);
 	return 0;
 }
+
+
+void Add(int* p)
+{
+	(*p)++;//++的优先级高，不加括号会加到p上
+}
+int main()
+{
+	int num = 0;
+	Add(&num);//改变num的值，所以使用传址变量
+	printf("%d\n", num);
+	return 0;
+}
