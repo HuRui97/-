@@ -1123,3 +1123,53 @@ int main()
 }
 
 
+int Fac1(int n)
+{
+	int i = 0;
+	int ret = 1;
+	for (i = 1; i <=n; i++)
+	{
+		ret *= i;
+	}
+	return ret;
+}
+
+int Fac2(int n)
+{
+	if (n > 1)
+		return n * Fac2(n - 1);
+	else
+		return 1;
+}
+
+int fib1(int n)
+{
+	if (n > 2)
+		return fib1(n - 1)+fib1(n-2);
+	else
+		return 1;
+}
+
+int fib2(int n)
+{
+	int a = 1;
+	int b = 1;
+	int c = 0;
+	while (n > 2)
+	{
+		c = a + b;
+		a = b;
+		b = c;
+		n--;
+	}
+	return c;
+}
+int main()
+{
+	int n = 0;
+	int ret = 0;
+	scanf("%d", &n);
+	ret = fib2(n);
+	printf("%d\n", ret);
+	return 0;
+}
