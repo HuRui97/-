@@ -1241,3 +1241,16 @@ int main()
 	}
 	return 0;
 }
+
+
+
+int main()
+{
+	int arr[] = { 1,2,3,4,5,6,7 };//arr即为数组arr的首元素地址，但有两个例外
+	printf("%p\n", arr);
+	printf("%p\n", &arr[0]);
+	printf("%d\n", *arr);
+	int sz = sizeof(arr) / sizeof(arr[0]);//第一个例外，在函数sizeof(数组名)内表示整个数组，单位是字节
+	printf("%p\n", &arr);//&数组名时，数组名代表整个数组，地址与首元素地址相同，表示数组地址从此地址开始
+	return 0;
+}
